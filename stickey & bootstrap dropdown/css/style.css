@@ -1,0 +1,103 @@
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px #000;
+    color: #fff;
+  }
+  .extra,
+  #wrapper {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    /* background-color: #ccc; */
+  }
+ 
+  .extra {
+    height: 100px;
+  }
+  body {
+    font-family: georgia;
+    height: 1000px;
+  }
+  h4 {
+    text-align: center;
+  }
+  /* @media (min-height: 768px) {
+    #wrapper{
+      height: 500px;
+    }
+  } */
+
+
+
+
+  body, html {
+    padding: 0;
+    margin: 0;
+  }
+  
+  header, footer, aside, main, #box {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    vertical-align: middle;
+  }
+  
+  header {
+    height: 150px;
+    background: red;
+  }
+  
+  /* footer {
+    height: 2000px;
+    /* background: green; 
+  } */
+  
+ aside {
+    width: 30%;
+    float: left;
+    height: 1000px; 
+     /* background: gold;  */
+ }
+  
+  #box {
+    height: 100px;
+    /* background: blue; */
+    
+  }
+  
+  main {
+    width: 70%;
+    float: left;
+    /* background: purple; */
+    height: 500px;
+  }
+  
+  .clearfix:after {
+       visibility: hidden;
+       display: block;
+       font-size: 0;
+       content: " ";
+       clear: both;
+       height: 0;
+       }
+  .clearfix { display: inline-block; }
+  /* start commented backslash hack \*/
+  * html .clearfix { height: 1%; }
+  .clearfix { display: block; }
+  /* close commented backslash hack */
+
+
+ 
+   
+  

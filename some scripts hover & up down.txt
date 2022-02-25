@@ -1,0 +1,49 @@
+<form name="myForm" onclick="return validateForm()">
+
+   Name:<input type="text" name="name">
+<br>
+   fName:<input type="text" name="fname">
+<br>
+   lName:<input type="text" name="lname">
+<br>	
+	<input type="submit" value="submit"> 
+
+</form>
+
+
+
+<script>
+function validateForm(){
+
+let x=document.Forms["myForm"]["fname"].value;
+
+if(x == ""){
+
+ alert("empty fields must be filled");
+ return false;
+	}
+}
+</script>
+}
+</script>
+
+if we hover on this the paragraph will go up and come down ,reference -artflute
+
+ $('.home-block-list').hover(function (e) {
+                e.preventDefault();
+                $(this).find('.search-items').animate({ marginTop: '44px' }, 200);
+            }, function () {
+                $(this).find('.search-items').animate({ marginTop: '64px' }, 200);
+            });
+
+
+
+
+
+if we hover it will show details ,if not nope
+
+  $('.artwork-sort-list').hover(function () {
+                $(this).find('.artist-detail').fadeIn('slow');
+            }, function () {
+                $(this).find('.artist-detail').fadeOut('fast');
+            });

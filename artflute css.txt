@@ -1,0 +1,7 @@
+.accordin-section-main-01 h5 {
+    margin: 20px 0px;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}

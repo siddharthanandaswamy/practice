@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<style>
+    .help-block {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="">
+        <section class="wrapper apply">
+
+            <section class="card blue-card">
+                <h1 class="bpm">Apply for
+                    BPM Technical Architect</h1>
+
+
+            </section>
+
+            <h1 class="now">APPLY NOW</h1>
+
+
+
+
+
+            <section class="card bg-white">
+
+                <form id="myform">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="name" for="First Name">Firstname</label>
+                                <input name="one" data-bv-notempty-message="Please enter message" required type="text"
+                                    placeholder="First name" class="fname bor">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="name" for="First Name">Last Name</label>
+                                <input class="fname bor " name="two" data-bv-notempty-message="Please enter message"
+                                    required type="text" placeholder="First name">
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="name" for="First Name">Country Code</label>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" name="three" data-bv-notempty-message="Please enter message"
+                                            required class="fname bor code" placeholder="India (+91)">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" name="four" data-bv-notempty-message="Please enter message"
+                                            required class="fname bor" placeholder="First name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="name" for="First Name">Email</label>
+                                <input type="text" name="five" data-bv-notempty-message="Please enter message" required
+                                    class="fname bor" placeholder="First name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="name" for="First Name">Location</label>
+                                <input type="text" name="six" data-bv-notempty-message="Please enter message" required
+                                    class="fname bor" placeholder="First name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="name" for="First Name">Education</label>
+                                <input type="text" name="seven" data-bv-notempty-message="Please enter message" required
+                                    class="fname bor" placeholder="First name">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="next ext">Next</button>
+                    </div>
+
+                </form>
+    </div>
+    </section>
+
+    <section >
+        <form>
+            <div id="error"></div>
+            <div id="form">
+                <lable for="name">Name</lable>
+                <input type="text" id="name" name="name">
+
+                <lable for="name">Passward</lable>
+                <input type="text" id="passward" name="name">
+            </div>
+            <button id="submit">submit</button>
+        </form>
+    </section>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/bootstrapValidator.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script> $(".next").click(function () {
+            var form = $("#myform");
+            form.validate({
+                errorElement: 'span',
+                errorClass: 'help-block',
+                highlight: function (element, errorClass, validClass) {
+                    $(element).closest('.form-group').addClass("has-error");
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).closest('.form-group').removeClass("has-error");
+                    $(element).closest('.form-group').addClass("has-success");
+                },
+                rules: {
+                    one: {                            //  in input if u give name as one u hav eto give here the same
+                        required: true,
+                    },
+                    two: {
+                        required: true,
+                    },
+                    three: {
+                        required: true,
+                    },
+                    from_time: {
+                        required: true,
+                    },
+                    four: {
+                        required: true,
+                    },
+                    five: {
+                        required: true,
+                    },
+                    six: {
+                        required: true,
+                    },
+                    seven: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    one: {
+                        required: "Please enter Number",
+                    },
+                    two: {
+                        required: "Please mention other occation",
+                    },
+                    three: {
+                        required: "Please enter name",
+                    },
+                    from_time: {
+                        required: "Please select from time",
+                    },
+                    four: {
+                        required: "Please select",
+                    },
+                    five: {
+                        required: "Please enter e-mail",
+                    },
+                    six: {
+                        required: "Please enter"
+                    },
+                    seven: {
+                        required: "Please enter"
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>accordian</title>
+  <style>
+    .arrow-img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .btn-link[aria-expanded="false"] img {
+      transform: rotate(90deg);
+      transition: 0.5s;
+    }
+
+    .arrow-img {
+      transition: 0.5s;
+      transform: rotate(270deg);
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    .btn-link:hover {
+      text-decoration: none;
+      color: black;
+    }
+
+    .btn-link {
+      color: black;
+    }
+
+    .accordian-table .space {
+      padding: 0 60px 0 33px;
+    }
+
+    .accordian-table td,
+    th {
+      max-width: 10px;
+    }
+
+    .accordian-table .card-body {
+      padding: 10px 60px 10px 60px;
+    }
+
+    th td:focus {
+      text-decoration: none;
+    }
+
+    .outer-space {
+      padding: 12px 0px;
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="accordian-table">
+    
+      <div class="outer-space">
+        <div class="space">
+          <table>
+            <tr>
+
+              <th>main-header1</th>
+              <th>main-header2</th>
+              <th>main-header3</th>
+              <th>main-header4</th>
+              <th>header 4</th>
+              <th>header 4</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left d-flex" type="button" data-toggle="collapse"
+                data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <table>
+                  <tr>
+
+
+                    <th>header 1</th>
+                    <th>header 2</th>
+                    <th>header 3</th>
+                    <th>header 4</th>
+
+                    <th>header 4</th>
+                    <th>header 4</th>
+                  </tr>
+                </table>
+                <div class="ml-auto"><img class="arrow-img" src="./image/right-arrow.svg"></div>
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <table>
+                <tr>
+                  <th>header</th>
+                  <th>header</th>
+                  <th>header</th>
+                  <th>header</th>
+                 
+                </tr>
+                <tr>
+                  <td>hello12233</td>
+                  <td>hey</td>
+                  <td>java</td>
+                  <td>javascript</td>
+                </tr>
+                <tr>
+                  <td>hello</td>
+                  <td>hey</td>
+                  <td>java</td>
+                  <td>javascript</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed d-flex" type="button" data-toggle="collapse"
+                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <table>
+                  <tr>
+                    <th>one </th>
+                    <th>two</th>
+                    <th>three</th>
+                    <th>four</th>
+                  </tr>
+                </table>
+                <div class="ml-auto"><img class="arrow-img" src="./image/right-arrow.svg"></div>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <table>
+                <tr>
+                  <td>hello</td>
+                  <td>hey</td>
+                  <td>java</td>
+                  <td>javascript</td>
+                </tr>
+                <tr>
+                  <td>hello</td>
+                  <td>hey</td>
+                  <td>java</td>
+                  <td>javascript</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed d-flex" type="button" data-toggle="collapse"
+                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <table>
+                  <tr>
+                    <th>one </th>
+                    <th>two</th>
+                    <th>three</th>
+                    <th>four</th>
+                  </tr>
+                </table>
+                <div class="ml-auto"><img class="arrow-img" src="./image/right-arrow.svg"></div>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <table>
+                <tr>
+                  <td>hello</td>
+                  <td>hey</td>
+                  <td>java</td>
+                  <td>javascript</td>
+                </tr>
+                <tr>
+                  <td>hello</td>
+                  <td>hey</td>
+                  <td>java</td>
+                  <td>javascript</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

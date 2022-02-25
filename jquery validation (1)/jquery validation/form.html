@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <title>Jquery Validation</title>
+  <style>
+    .help-block {
+      color: red;
+    }
+
+   
+
+    .hello {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="">
+      <div class="container">
+        <form class="" action="" method="POST" id="myform">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="siddharth" name="name">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput3">Moblie number</label>
+            <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="9449013822"
+              name="number">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput2">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com"
+              name="email">
+          </div>
+          <div class="form-group ">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="select">
+              <option></option>
+              <option id="one">2</option>
+              <option id="one">3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group hello">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="area"></textarea>
+          </div>
+
+          <button type="submit" class="next">Submit</button>
+        </form>
+      </div>
+    </section>
+
+
+
+  </div>
+
+
+
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+
+
+
+  <script src="js/custom.js"></script>
+  <script>
+    $(".next").click(function () {
+      var form = $("#myform");
+      form.validate({
+        errorElement: 'span',
+        errorClass: 'help-block',
+        highlight: function (element, errorClass, validClass) {
+          $(element).closest('.form-group').addClass("has-error");
+
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).closest('.form-group').removeClass("has-error");
+          $(element).closest('.form-group').addClass("has-success");
+        },
+        rules: {
+          number: {
+            required: true,
+          },
+          other_occassion: {
+            required: true,
+          },
+          name: {
+            required: true,
+          },
+          from_time: {
+            required: true,
+          },
+          select: {
+            required: true,
+          },
+          email: {
+            required: true,
+          },
+          area: {
+            required: true,
+          },
+        },
+        messages: {
+          number: {
+            required: "Please enter Number",
+          },
+          other_occassion: {
+            required: "Please mention other occation",
+          },
+          name: {
+            required: "Please enter name",
+          },
+          from_time: {
+            required: "Please select from time",
+          },
+          select: {
+            required: "Please select",
+          },
+          email: {
+            required: "Please enter e-mail",
+          },
+          area: {
+            required: "Please enter"
+          }
+        }
+      });
+    });
+
+
+
+
+
+// wen we click on drop down the session will appear
+
+    $(function () {
+      $('#exampleFormControlSelect1').change(function () {
+        $('.hello').show();
+
+      });
+    });
+
+
+
+    // https://codepen.io/scanfcode/pen/vZJmQo reference link if we click on particular dropdown it will show the result according to that.
+
+    $('#select_box').change(function () {
+      var select = $(this).find(':selected').val();
+      $(".hide").hide();
+      $('#' + select).show();
+
+    }).change(); 
+    
+
+  // $(function() {
+  //   $('#exampleFormControlSelect1').change(function(){
+  //   $('.hello').show();
+  //   $('#' + $(this).val()).show();
+  //   });
+  // });
+  </script>
+
+
+</body>
+
+</html>
